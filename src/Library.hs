@@ -7,6 +7,7 @@ type Dinero = Number
 type Muchedumbre = [Persona]
 type Semilla = Number
 type PepesInfinitos = [Persona]
+type MiTupla = (Number, String)
 
 -- Definir mis tipos data
 data Persona = Persona {
@@ -27,6 +28,22 @@ numerosLocos = [1,2,3]
 
 pepesInfinitos :: PepesInfinitos
 pepesInfinitos = repeat pepe
+
+-- Tuplas
+miTuplaLoca :: MiTupla
+miTuplaLoca = (200, "buenas")
+
+-- Función que devuelve el primer valor de una tupla
+primerValorDeMiTupla :: MiTupla -> Number
+primerValorDeMiTupla = fst
+
+-- Función que devuelve el primer valor de una tupla de otra manera
+primerValorDeMiTuplaOtraManera :: MiTupla -> Number
+primerValorDeMiTuplaOtraManera (primerValor, _) = primerValor -- Como no necesito el segundo valor, coloco "_"
+
+-- Funcion que suma los valores de una tupla de dos elementos
+sumarValoresTupla :: (Number, Number) -> Number
+sumarValoresTupla (valor1, valor2) = valor1 + valor2
 
 -- Funcion que devuelve un elemento de la variable
 edadPersona :: Persona -> Edad
